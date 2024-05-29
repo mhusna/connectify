@@ -19,5 +19,8 @@ namespace ConnectifyHub.Domain.Entities.Concrete
 
         // Begenilen postlar.
         public ICollection<Like> Likes { get; set; }
+
+        // Yorum yapilan postlar.
+        public ICollection<Comment> Comments { get; set; }
     }
 }

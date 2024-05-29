@@ -17,7 +17,10 @@ namespace ConnectifyHub.Domain.Entities.Concrete
         public DateTime EditTime { get; set; }
         public Status EntityStatus { get; set; }
 
-        // Postu Begenenler
+        // Postun Begenileri
         public ICollection<Like> Likes { get; set; }
+
+        // Postun Yorumlari
+        public ICollection<Comment> Comments { get; set; }
     }
 }

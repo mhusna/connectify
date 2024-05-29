@@ -11,10 +11,20 @@ namespace ConnectifyHub.Domain.Entities.Concrete
     public class Like: IBaseEntity
     {
         public int LikeID { get; set; }
-        public int AdmirerID { get; set; }
-        public int PostID { get; set; }
         public DateTime LikedTime { get; set; }
+
+        // Soft delete icin
         public Status EntityStatus { get; set; }
+        
+        // Like - Dislike
         public LikeStatus LikeStatus { get; set; }
+
+        // Begenen kisi
+        public int LikerID { get; set; }
+        public User Liker { get; set; }
+
+        // Begenilen gonderi
+        public int PostID { get; set; }
+        public Post Post { get; set; }
     }
 }

@@ -8,5 +8,17 @@ namespace ConnectifyHub.Domain.Entities.Concrete
 {
     public class Message
     {
+        public int MessageID { get; set; }
+        public string MessageContent { get; set; }
+        public DateTime SendTime { get; set; }
+        public DateTime ReadTime { get; set; }
+
+        // Mesaji gonderen
+        public int SenderID { get; set; }
+        public User Sender { get; set; }
+
+        // Mesaji alan
+        public int ReceiverID { get; set; }
+        public User Receiver { get; set; }
     }
 }
