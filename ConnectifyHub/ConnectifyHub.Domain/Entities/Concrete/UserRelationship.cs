@@ -16,11 +16,11 @@ namespace ConnectifyHub.Domain.Entities.Concrete
         public UserRelationshipStatus RelationshipStatus { get; set; }
 
         // Aksiyonu alan
-        public int ActorID { get; set; }
+        public string ActorID { get; set; }
         public User Actor { get; set; }
 
         // Etkilenen
-        public int AffectedID { get; set; }
+        public string AffectedID { get; set; }
         public User Affected { get; set; }
     }
 }

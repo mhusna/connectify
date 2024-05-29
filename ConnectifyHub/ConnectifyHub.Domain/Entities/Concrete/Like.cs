@@ -20,7 +20,7 @@ namespace ConnectifyHub.Domain.Entities.Concrete
         public LikeStatus LikeStatus { get; set; }
 
         // Begenen kisi
-        public int LikerID { get; set; }
+        public string LikerID { get; set; }
         public User Liker { get; set; }
 
         // Begenilen gonderi

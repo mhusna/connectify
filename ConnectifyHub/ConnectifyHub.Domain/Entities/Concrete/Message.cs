@@ -14,11 +14,11 @@ namespace ConnectifyHub.Domain.Entities.Concrete
         public DateTime ReadTime { get; set; }
 
         // Mesaji gonderen
-        public int SenderID { get; set; }
+        public string SenderID { get; set; }
         public User Sender { get; set; }
 
         // Mesaji alan
-        public int ReceiverID { get; set; }
+        public string ReceiverID { get; set; }
         public User Receiver { get; set; }
     }
 }

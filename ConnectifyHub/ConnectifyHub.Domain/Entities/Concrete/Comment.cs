@@ -17,7 +17,7 @@ namespace ConnectifyHub.Domain.Entities.Concrete
         public Status EntityStatus { get; set; }
 
         // Yorumu yazan kisi
-        public int CommentorID { get; set; }
+        public string CommentorID { get; set; }
         public User Commentor { get; set; }
 
         // Yorum yazilan gonderi

@@ -1,4 +1,8 @@
 
+using ConnectifyHub.Domain.Entities.Concrete;
+using ConnectifyHub.Infrastructure;
+using Microsoft.Extensions.DependencyInjection;
+
 namespace ConnectifyHub.WebAPI
 {
     public class Program
@@ -8,7 +12,9 @@ namespace ConnectifyHub.WebAPI
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-
+            builder.Services.AddDbContext<ConnectifyContext>();
+            builder.Services.AddIdentityCore<User>()
+                            .AddEntityFrameworkStores<ConnectifyContext>();
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
