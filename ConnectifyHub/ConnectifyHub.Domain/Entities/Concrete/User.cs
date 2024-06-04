@@ -14,13 +14,21 @@ namespace ConnectifyHub.Domain.Entities.Concrete
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public DateTime BirthDate { get; set; }
-        public string ProfilePhotoUrl { get; set; }
-        //public Status EntityStatus { get; set; }
+        public string? ProfilePhotoUrl { get; set; }
 
         // Begenilen postlar.
-        public ICollection<Like> Likes { get; set; }
+        public ICollection<Like>? Likes { get; set; }
 
         // Yorum yapilan postlar.
-        public ICollection<Comment> Comments { get; set; }
+        public ICollection<Comment>? Comments { get; set; }
+
+        // Kullanıcının oluşturduğu postlar.
+        public ICollection<Post> Posts { get; set; }
+
+        // Kullanıcının gönderdiği mesajlar
+        public ICollection<Message> SentMessages { get; set; }
+
+        // Kullanıcının aldığı mesajlar
+        public ICollection<Message> ReceivedMessages { get; set; }
     }
 }

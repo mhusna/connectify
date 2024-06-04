@@ -10,7 +10,7 @@ namespace ConnectifyHub.Domain.Entities.Concrete
 {
     public class UserRelationship
     {
-        public int UserRelationshipID { get; set; }
+        public int ID { get; set; }
         public DateTime RequestTime { get; set; }
         public DateTime? ResponseTime { get; set; } = null;
         public UserRelationshipStatus RelationshipStatus { get; set; }

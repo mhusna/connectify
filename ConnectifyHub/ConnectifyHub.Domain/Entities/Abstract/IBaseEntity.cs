@@ -9,6 +9,7 @@ namespace ConnectifyHub.Domain.Entities.Abstract
 {
     public interface IBaseEntity
     {
+        public int ID { get; set; }
         public Status EntityStatus { get; set; }
     }
 }

@@ -10,7 +10,7 @@ namespace ConnectifyHub.Domain.Entities.Concrete
 {
     public class Like: IBaseEntity
     {
-        public int LikeID { get; set; }
+        public int ID { get; set; }
         public DateTime LikedTime { get; set; }
 
         // Soft delete icin

@@ -10,10 +10,10 @@ namespace ConnectifyHub.Domain.Entities.Concrete
 {
     public class Comment: IBaseEntity
     {
-        public int CommentID { get; set; }
+        public int ID { get; set; }
         public string CommentContent { get; set; }
         public DateTime CommentCreateTime { get; set; }
-        public DateTime CommentEditTime { get; set; }
+        public DateTime? CommentEditTime { get; set; }
         public Status EntityStatus { get; set; }
 
         // Yorumu yazan kisi
@@ -23,6 +23,5 @@ namespace ConnectifyHub.Domain.Entities.Concrete
         // Yorum yazilan gonderi
         public int PostID { get; set; }
         public Post Post { get; set; }
-
     }
 }
