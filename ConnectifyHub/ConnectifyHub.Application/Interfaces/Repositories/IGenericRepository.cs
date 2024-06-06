@@ -1,18 +1,19 @@
-﻿using System;
+﻿using ConnectifyHub.Domain.Entities.Abstract;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ConnectifyHub.Application.Interfaces.Repositories
 {
-    public interface IGenericRepository<T> where T : class
+    public interface IGenericRepository<T> where T : class, IBaseEntity, new()
     {
-        T GetById(int id);
-        ICollection<T> GetAll();
-        int UpdateByEntity(T entity);
-        int DeleteById(int id);
-        T FindByIntId(int id);
-        T FindByStringId(string id);
+        Task<ICollection<T>> GetAll(Expression<Func<T, bool>>? filter = null);
+        Task<int> InsertEntity(T entity);
+        Task<int> UpdateByEntity(T entity);
+        Task<int> DeleteById(int id);
+        Task<T> Find(Expression<Func<T, bool>> filter);
     }
 }

@@ -1,6 +1,8 @@
 
+using ConnectifyHub.Application.Interfaces.Repositories;
 using ConnectifyHub.Domain.Entities.Concrete;
 using ConnectifyHub.Infrastructure;
+using ConnectifyHub.Infrastructure.Repositories.EFCore;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace ConnectifyHub.WebAPI
@@ -19,6 +21,8 @@ namespace ConnectifyHub.WebAPI
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.Services.AddScoped<IPostRepository, PostRepository>();
 
             var app = builder.Build();
 

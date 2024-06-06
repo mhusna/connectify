@@ -8,12 +8,13 @@ using System.Threading.Tasks;
 
 namespace ConnectifyHub.Domain.Entities.Concrete
 {
-    public class UserRelationship
+    public class UserRelationship : IBaseEntity
     {
         public int ID { get; set; }
         public DateTime RequestTime { get; set; }
         public DateTime? ResponseTime { get; set; } = null;
         public UserRelationshipStatus RelationshipStatus { get; set; }
+        public Status EntityStatus { get; set; }
 
         // Aksiyonu alan
         public string ActorID { get; set; }

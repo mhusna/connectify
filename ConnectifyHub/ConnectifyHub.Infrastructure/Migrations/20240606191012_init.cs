@@ -3,14 +3,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
-
 namespace ConnectifyHub.Infrastructure.Migrations
 {
-    /// <inheritdoc />
     public partial class init : Migration
     {
-        /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
@@ -129,15 +125,15 @@ namespace ConnectifyHub.Infrastructure.Migrations
                 {
                     table.PrimaryKey("PK_AspNetUserRoles", x => new { x.UserId, x.RoleId });
                     table.ForeignKey(
-                        name: "FK_AspNetUserRoles_ASPNETUSERS_UserId",
-                        column: x => x.UserId,
-                        principalTable: "ASPNETUSERS",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
                         name: "FK_AspNetUserRoles_AspNetRoles_RoleId",
                         column: x => x.RoleId,
                         principalTable: "AspNetRoles",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_AspNetUserRoles_ASPNETUSERS_UserId",
+                        column: x => x.UserId,
+                        principalTable: "ASPNETUSERS",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -308,25 +304,25 @@ namespace ConnectifyHub.Infrastructure.Migrations
                 columns: new[] { "Id", "AccessFailedCount", "BirthDate", "ConcurrencyStamp", "Email", "EmailConfirmed", "FirstName", "LastName", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "ProfilePhotoUrl", "SecurityStamp", "TwoFactorEnabled", "UserName" },
                 values: new object[,]
                 {
-                    { "361004f8-4195-49fe-886b-8d193654c9eb", 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "012d1df1-f0bf-4fe4-8504-a0a4a487cfd6", "yusuf@gmail.com", 0, "Yusuf", "Ziya", 0, null, "YUSUF@GMAIL.COM", "YZIYA", "AQAAAAIAAYagAAAAEKrSxX1OtS+JsiSomDXHbRUWTQFHmHjomEg5kxUTSyHp5vtdqYJyz+GtJ4k4t2XZkQ==", null, 0, null, "18d11ae5-4be3-450c-8b99-d21c44f6dce8", 0, "yziya" },
-                    { "70b26195-6d1d-40d6-bd23-a685287e740f", 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "976dabbf-4eff-4caa-bdde-fbc55b0cc494", "husna@gmail.com", 0, "Husna", "Kisla", 0, null, "HUSNA@GMAIL.COM", "HKISLA", "AQAAAAIAAYagAAAAECyAm4NNaMkMHQ13VRZf5A7VNg/HlJCNdAFDqT4J6AyGNPjD96wwB8Ug6ndArRTogA==", null, 0, null, "d4010263-f5ab-48af-bc01-6b5c3c4b239c", 0, "hkisla" },
-                    { "86b7b0a4-20af-488f-8dd9-4362256c9ae2", 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "b89fe9cc-4a65-4baf-bd0d-ad77433c6137", "erkut@gmail.com", 0, "Erkut", "Ates", 0, null, "ERKUT@GMAIL.COM", "EATES", "AQAAAAIAAYagAAAAECyAm4NNaMkMHQ13VRZf5A7VNg/HlJCNdAFDqT4J6AyGNPjD96wwB8Ug6ndArRTogA==", null, 0, null, "029c8f93-35e6-4ba8-b664-12655395096b", 0, "eates" }
+                    { "12dcc3ab-8986-407c-8ad2-2b2096a13997", 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "48b5cf12-ae5c-42cd-8dd1-57b70bf4164c", "yusuf@gmail.com", false, "Yusuf", "Ziya", false, null, "YUSUF@GMAIL.COM", "YZIYA", "AQAAAAEAACcQAAAAEDklFxmANJQDpKK4oD5SHXILBEsWuN37DR/Z3Fnrmkldws1Ly4XWZgeycgM9jQ+VnQ==", null, false, null, "703375a1-9a7c-4f1d-b551-72fcd49b93ed", false, "yziya" },
+                    { "2358f700-f99d-4e37-93d0-dd143024c518", 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "6ce3b620-85fc-4d45-948a-812a67c1caf5", "husna@gmail.com", false, "Husna", "Kisla", false, null, "HUSNA@GMAIL.COM", "HKISLA", "AQAAAAEAACcQAAAAEAXN6I4p0Y2eVCbcjplqxa96E+bF/hGaOvHLWsc8ceXMQxo7DgfgLWDtgqjJuaaOmw==", null, false, null, "7fa459ec-9cff-424c-948d-7721df708965", false, "hkisla" },
+                    { "ba62dc97-bc35-4b79-97ed-2de84a833652", 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "47434536-c5e0-4d87-9ebf-4f3b66b732f6", "erkut@gmail.com", false, "Erkut", "Ates", false, null, "ERKUT@GMAIL.COM", "EATES", "AQAAAAEAACcQAAAAEAXN6I4p0Y2eVCbcjplqxa96E+bF/hGaOvHLWsc8ceXMQxo7DgfgLWDtgqjJuaaOmw==", null, false, null, "dc261a72-0396-4283-91a3-5ee54c31c27f", false, "eates" }
                 });
 
             migrationBuilder.InsertData(
                 table: "POSTS",
                 columns: new[] { "ID", "CreatedTime", "CreatorID", "CreatorId", "EditTime", "EntityStatus", "PostContent", "PostContentImageUrl" },
-                values: new object[] { 1, new DateTime(2024, 6, 4, 22, 46, 31, 941, DateTimeKind.Local).AddTicks(9444), 1, null, null, 0, "Merhaba Dunya", "hello_world.png" });
+                values: new object[] { 1, new DateTime(2024, 6, 6, 22, 10, 12, 463, DateTimeKind.Local).AddTicks(54), 1, null, null, 0, "Merhaba Dunya", "hello_world.png" });
 
             migrationBuilder.InsertData(
                 table: "COMMENTS",
                 columns: new[] { "ID", "CommentContent", "CommentCreateTime", "CommentEditTime", "CommentorID", "EntityStatus", "PostID" },
-                values: new object[] { 1, "Ilk yorum", new DateTime(2024, 6, 4, 22, 46, 31, 941, DateTimeKind.Local).AddTicks(9473), null, "70b26195-6d1d-40d6-bd23-a685287e740f", 0, 1 });
+                values: new object[] { 1, "Ilk yorum", new DateTime(2024, 6, 6, 22, 10, 12, 463, DateTimeKind.Local).AddTicks(73), null, "2358f700-f99d-4e37-93d0-dd143024c518", 0, 1 });
 
             migrationBuilder.InsertData(
                 table: "LIKES",
                 columns: new[] { "ID", "EntityStatus", "LikeStatus", "LikedTime", "LikerID", "PostID" },
-                values: new object[] { 1, 0, 0, new DateTime(2024, 6, 4, 22, 46, 31, 941, DateTimeKind.Local).AddTicks(9478), "86b7b0a4-20af-488f-8dd9-4362256c9ae2", 1 });
+                values: new object[] { 1, 0, 0, new DateTime(2024, 6, 6, 22, 10, 12, 463, DateTimeKind.Local).AddTicks(80), "ba62dc97-bc35-4b79-97ed-2de84a833652", 1 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
@@ -408,7 +404,6 @@ namespace ConnectifyHub.Infrastructure.Migrations
                 column: "AffectedID");
         }
 
-        /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(

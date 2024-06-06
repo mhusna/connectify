@@ -17,10 +17,10 @@ namespace ConnectifyHub.Infrastructure.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.6")
+                .HasAnnotation("ProductVersion", "6.0.31")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
-            OracleModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+            OracleModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
             modelBuilder.Entity("ConnectifyHub.Domain.Entities.Concrete.Comment", b =>
                 {
@@ -28,7 +28,7 @@ namespace ConnectifyHub.Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("NUMBER(10)");
 
-                    OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 2L);
+                    OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 2L, 1);
 
                     b.Property<string>("CommentContent")
                         .IsRequired()
@@ -63,8 +63,8 @@ namespace ConnectifyHub.Infrastructure.Migrations
                         {
                             ID = 1,
                             CommentContent = "Ilk yorum",
-                            CommentCreateTime = new DateTime(2024, 6, 4, 22, 46, 31, 941, DateTimeKind.Local).AddTicks(9473),
-                            CommentorID = "70b26195-6d1d-40d6-bd23-a685287e740f",
+                            CommentCreateTime = new DateTime(2024, 6, 6, 22, 10, 12, 463, DateTimeKind.Local).AddTicks(73),
+                            CommentorID = "2358f700-f99d-4e37-93d0-dd143024c518",
                             EntityStatus = 0,
                             PostID = 1
                         });
@@ -76,7 +76,7 @@ namespace ConnectifyHub.Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("NUMBER(10)");
 
-                    OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 2L);
+                    OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 2L, 1);
 
                     b.Property<int>("EntityStatus")
                         .HasColumnType("NUMBER(10)");
@@ -108,8 +108,8 @@ namespace ConnectifyHub.Infrastructure.Migrations
                             ID = 1,
                             EntityStatus = 0,
                             LikeStatus = 0,
-                            LikedTime = new DateTime(2024, 6, 4, 22, 46, 31, 941, DateTimeKind.Local).AddTicks(9478),
-                            LikerID = "86b7b0a4-20af-488f-8dd9-4362256c9ae2",
+                            LikedTime = new DateTime(2024, 6, 6, 22, 10, 12, 463, DateTimeKind.Local).AddTicks(80),
+                            LikerID = "ba62dc97-bc35-4b79-97ed-2de84a833652",
                             PostID = 1
                         });
                 });
@@ -151,7 +151,7 @@ namespace ConnectifyHub.Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("NUMBER(10)");
 
-                    OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 2L);
+                    OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 2L, 1);
 
                     b.Property<DateTime>("CreatedTime")
                         .HasColumnType("TIMESTAMP(7)");
@@ -186,7 +186,7 @@ namespace ConnectifyHub.Infrastructure.Migrations
                         new
                         {
                             ID = 1,
-                            CreatedTime = new DateTime(2024, 6, 4, 22, 46, 31, 941, DateTimeKind.Local).AddTicks(9444),
+                            CreatedTime = new DateTime(2024, 6, 6, 22, 10, 12, 463, DateTimeKind.Local).AddTicks(54),
                             CreatorID = 1,
                             EntityStatus = 0,
                             PostContent = "Merhaba Dunya",
@@ -277,10 +277,10 @@ namespace ConnectifyHub.Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "361004f8-4195-49fe-886b-8d193654c9eb",
+                            Id = "12dcc3ab-8986-407c-8ad2-2b2096a13997",
                             AccessFailedCount = 0,
                             BirthDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "012d1df1-f0bf-4fe4-8504-a0a4a487cfd6",
+                            ConcurrencyStamp = "48b5cf12-ae5c-42cd-8dd1-57b70bf4164c",
                             Email = "yusuf@gmail.com",
                             EmailConfirmed = false,
                             FirstName = "Yusuf",
@@ -288,18 +288,18 @@ namespace ConnectifyHub.Infrastructure.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "YUSUF@GMAIL.COM",
                             NormalizedUserName = "YZIYA",
-                            PasswordHash = "AQAAAAIAAYagAAAAEKrSxX1OtS+JsiSomDXHbRUWTQFHmHjomEg5kxUTSyHp5vtdqYJyz+GtJ4k4t2XZkQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEDklFxmANJQDpKK4oD5SHXILBEsWuN37DR/Z3Fnrmkldws1Ly4XWZgeycgM9jQ+VnQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "18d11ae5-4be3-450c-8b99-d21c44f6dce8",
+                            SecurityStamp = "703375a1-9a7c-4f1d-b551-72fcd49b93ed",
                             TwoFactorEnabled = false,
                             UserName = "yziya"
                         },
                         new
                         {
-                            Id = "86b7b0a4-20af-488f-8dd9-4362256c9ae2",
+                            Id = "ba62dc97-bc35-4b79-97ed-2de84a833652",
                             AccessFailedCount = 0,
                             BirthDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "b89fe9cc-4a65-4baf-bd0d-ad77433c6137",
+                            ConcurrencyStamp = "47434536-c5e0-4d87-9ebf-4f3b66b732f6",
                             Email = "erkut@gmail.com",
                             EmailConfirmed = false,
                             FirstName = "Erkut",
@@ -307,18 +307,18 @@ namespace ConnectifyHub.Infrastructure.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "ERKUT@GMAIL.COM",
                             NormalizedUserName = "EATES",
-                            PasswordHash = "AQAAAAIAAYagAAAAECyAm4NNaMkMHQ13VRZf5A7VNg/HlJCNdAFDqT4J6AyGNPjD96wwB8Ug6ndArRTogA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEAXN6I4p0Y2eVCbcjplqxa96E+bF/hGaOvHLWsc8ceXMQxo7DgfgLWDtgqjJuaaOmw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "029c8f93-35e6-4ba8-b664-12655395096b",
+                            SecurityStamp = "dc261a72-0396-4283-91a3-5ee54c31c27f",
                             TwoFactorEnabled = false,
                             UserName = "eates"
                         },
                         new
                         {
-                            Id = "70b26195-6d1d-40d6-bd23-a685287e740f",
+                            Id = "2358f700-f99d-4e37-93d0-dd143024c518",
                             AccessFailedCount = 0,
                             BirthDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "976dabbf-4eff-4caa-bdde-fbc55b0cc494",
+                            ConcurrencyStamp = "6ce3b620-85fc-4d45-948a-812a67c1caf5",
                             Email = "husna@gmail.com",
                             EmailConfirmed = false,
                             FirstName = "Husna",
@@ -326,9 +326,9 @@ namespace ConnectifyHub.Infrastructure.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "HUSNA@GMAIL.COM",
                             NormalizedUserName = "HKISLA",
-                            PasswordHash = "AQAAAAIAAYagAAAAECyAm4NNaMkMHQ13VRZf5A7VNg/HlJCNdAFDqT4J6AyGNPjD96wwB8Ug6ndArRTogA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEAXN6I4p0Y2eVCbcjplqxa96E+bF/hGaOvHLWsc8ceXMQxo7DgfgLWDtgqjJuaaOmw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "d4010263-f5ab-48af-bc01-6b5c3c4b239c",
+                            SecurityStamp = "7fa459ec-9cff-424c-948d-7721df708965",
                             TwoFactorEnabled = false,
                             UserName = "hkisla"
                         });
@@ -340,7 +340,7 @@ namespace ConnectifyHub.Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("NUMBER(10)");
 
-                    OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+                    OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
 
                     b.Property<string>("ActorID")
                         .IsRequired()
@@ -401,7 +401,7 @@ namespace ConnectifyHub.Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("NUMBER(10)");
 
-                    OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("ClaimType")
                         .HasColumnType("NVARCHAR2(2000)");
@@ -426,7 +426,7 @@ namespace ConnectifyHub.Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("NUMBER(10)");
 
-                    OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("ClaimType")
                         .HasColumnType("NVARCHAR2(2000)");
