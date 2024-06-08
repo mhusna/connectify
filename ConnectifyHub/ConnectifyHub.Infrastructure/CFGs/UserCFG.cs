@@ -33,6 +33,9 @@ namespace ConnectifyHub.Infrastructure.CFGs
 
             builder.Property(u => u.LockoutEnabled)
                    .HasColumnType("NUMBER(1)");
+
+            builder.HasIndex(u => u.UserName)
+                   .IsUnique(true);
         }
     }
 }

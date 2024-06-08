@@ -16,9 +16,11 @@ namespace ConnectifyHub.WebAPI.Controllers
             _mediator = mediator;
         }
 
-        public async Task<IActionResult> GetAll(PostGetAll model)
+        [HttpGet]
+        public async Task<IActionResult> GetAll()
         {
-            var result = await _mediator.Send(model);
+
+            var result = await _mediator.Send(new PostGetAll());
             return Ok(result);
         }
     }
